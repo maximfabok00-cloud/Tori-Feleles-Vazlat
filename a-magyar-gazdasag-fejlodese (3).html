@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A magyar gazdaság fejlődése</title>
+<style>
+  :root {
+    --bg: #f6f4ee;
+    --card: #ffffff;
+    --ink: #1f2a44;
+    --muted: #5b6478;
+    --accent: #2f4b9a;
+    --line: #dcd8cb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151822;
+      --card: #1e2230;
+      --ink: #e8eaf2;
+      --muted: #9aa3ba;
+      --accent: #8fa8f0;
+      --line: #313750;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 16px 56px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 28px;
+    color: var(--accent);
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 0 0 12px;
+    color: var(--accent);
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+  }
+  h2 .num {
+    font-variant: small-caps;
+    min-width: 2.2em;
+  }
+  ul { margin: 0; padding-left: 1.2em; }
+  li { margin: 6px 0; }
+  li > strong { color: var(--ink); }
+  ul ul { margin-top: 4px; list-style: circle; color: var(--muted); }
+  ul ul li { color: var(--ink); }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+  .tab {
+    font: inherit;
+    font-size: 1rem;
+    padding: 9px 20px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .tab:hover { color: var(--ink); }
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tab.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    .tab.active { color: #151822; }
+  }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .felelet { border-left: 4px solid var(--accent); }
+  .felelet p { margin: 0 0 14px; font-size: 1.05rem; }
+  .felelet p:last-child { margin-bottom: 0; }
+  .felelet .cim { font-weight: bold; color: var(--accent); }
+  ol { margin: 0; padding-left: 1.4em; }
+  .vazlat { border-left: 4px solid var(--accent); }
+  .osszefoglalo {
+    margin: 16px 0 0;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+    color: var(--muted);
+  }
+  .osszefoglalo strong { color: var(--ink); }
+  @media (max-width: 480px) {
+    h1 { font-size: 1.5rem; }
+    section { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>A magyar gazdaság fejlődése</h1>
+
+  <div class="tabs" role="tablist" aria-label="Nézet">
+    <button class="tab active" role="tab" id="tabbtn-jegyzet" aria-controls="tab-jegyzet" aria-selected="true">Teljes jegyzet</button>
+    <button class="tab" role="tab" id="tabbtn-vazlat" aria-controls="tab-vazlat" aria-selected="false" tabindex="-1">Rövid vázlat</button>
+    <button class="tab" role="tab" id="tabbtn-felelet" aria-controls="tab-felelet" aria-selected="false" tabindex="-1">Felelet</button>
+  </div>
+
+  <div class="panel active" id="tab-jegyzet" role="tabpanel" aria-labelledby="tabbtn-jegyzet">
+
+  <section>
+    <h2><span class="num">I.</span> A mezőgazdaság átalakulása</h2>
+    <ul>
+      <li><strong>Mennyiségi növekedés:</strong>
+        <ul>
+          <li>A Monarchia biztos piacot jelentett.</li>
+          <li>Mocsárok lecsapolása, legelők felszántása.</li>
+        </ul>
+      </li>
+      <li><strong>Intenzív gazdálkodás:</strong>
+        <ul>
+          <li>Ugar csökkenése, fejlett növényforgó (kukorica, burgonya, cukorrépa).</li>
+          <li>Gépek elterjedése</li>
+        </ul>
+      </li>
+      <li><strong>Változások az állattenyésztésben:</strong>
+        <ul>
+          <li>Általánossá vált az istállós állattenyésztés</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">II.</span> Az ipari forradalom kibontakozásának feltételei</h2>
+    <ul>
+      <li><strong>Feltételek:</strong>
+        <ul>
+          <li>Jobbágyfelszabadítás</li>
+          <li>A mezőgazdaság fejlődése</li>
+        </ul>
+      </li>
+      <li><strong>Kiemelt területek:</strong>
+        <ul>
+          <li>az infrastruktúra, bankrendszer, a közlekedés és a hírközlés</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">III.</span> Hitelrendszer, közlekedés és hírközlés</h2>
+    <ul>
+      <li><strong>Bankrendszer és tőke:</strong>
+        <ul>
+          <li>Külföldi tőke beáramlása, hitelintézetek számának gyors növekedése</li>
+        </ul>
+      </li>
+      <li><strong>Közlekedés és vasútépítés:</strong>
+        <ul>
+          <li>Baross Gábor („a vasminiszter"): Magánvasutak államosítása, zónatarifa bevezetése.</li>
+        </ul>
+      </li>
+      <li><strong>Hírközlés:</strong>
+        <ul>
+          <li>Távíró-, posta- és telefonhálózat kiépítése.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">IV.</span> Gyorsan fejlődő iparágak</h2>
+    <ul>
+      <li><strong>Élelmiszeripar:</strong>
+        <ul>
+          <li>Budapest Európa első, a világ második legnagyobb malomipari központja lett.</li>
+          <li>Cukorgyártás, szeszipar és dohányipar európai rangra emelkedése.</li>
+        </ul>
+      </li>
+      <li><strong>Nehézipar és gépipar:</strong>
+        <ul>
+          <li>Szén- és vasigény növekedése, gőzgépek elterjedése.</li>
+          <li>Járműgyártás</li>
+        </ul>
+      </li>
+      <li><strong>Elektrotechnika:</strong>
+        <ul>
+          <li>A Ganz-gyár révén világszínvonalra emelkedett</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  </div>
+
+  <div class="panel" id="tab-vazlat" role="tabpanel" aria-labelledby="tabbtn-vazlat">
+  <section class="vazlat">
+    <h2>Rövid vázlat</h2>
+    <ul>
+      <li><strong>Mezőgazdaság</strong>
+        <ul>
+          <li>biztos piac: Monarchia</li>
+          <li>mocsarak lecsapolása, legelők felszántása</li>
+          <li>kevesebb ugar, növényforgó, gépek</li>
+          <li>istállózó állattenyésztés</li>
+        </ul>
+      </li>
+      <li><strong>Ipari forradalom feltételei</strong>
+        <ul>
+          <li>jobbágyfelszabadítás</li>
+          <li>fejlődő mezőgazdaság</li>
+          <li>infrastruktúra</li>
+        </ul>
+      </li>
+      <li><strong>Hitelrendszer, közlekedés, hírközlés</strong>
+        <ul>
+          <li>külföldi tőke, új hitelintézetek</li>
+          <li>Baross Gábor: magánvasutak államosítása, zónatarifa</li>
+          <li>távíró, posta, telefon</li>
+        </ul>
+      </li>
+      <li><strong>Gyorsan fejlődő iparágak</strong>
+        <ul>
+          <li>élelmiszeripar: malomipar, cukor, szesz, dohány</li>
+          <li>nehézipar, gépipar: szén, vas, gőzgép, járműgyártás</li>
+          <li>elektrotechnika: Ganz-gyár</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  </div>
+
+  <div class="panel" id="tab-felelet" role="tabpanel" aria-labelledby="tabbtn-felelet">
+  <section class="felelet">
+    <h2>Felelet: A magyar gazdaság fejlődése</h2>
+
+    <p><span class="cim">Bevezetés.</span> A magyar gazdaság fejlődését négy fő területen mutatom be: a mezőgazdaság átalakulásán, az ipari forradalom feltételein, a hitelrendszer, a közlekedés és a hírközlés fejlődésén, végül a gyorsan fejlődő iparágakon.</p>
+
+    <p><span class="cim">1. A mezőgazdaság átalakulása.</span> Először a mezőgazdaságról beszélek. A termelés mennyiségileg nőtt, mert a Monarchia biztos piacot jelentett a magyar termékeknek. Ehhez mocsarakat csapoltak le, és legelőket szántottak fel. Emellett elterjedt az intenzív gazdálkodás: csökkent az ugar, fejlett növényforgót alkalmaztak, amelyben kukorica, burgonya és cukorrépa is szerepelt, és egyre több gépet használtak. Az állattenyésztésben általánossá vált az istállózás.</p>
+
+    <p><span class="cim">2. Az ipari forradalom feltételei.</span> Az ipari forradalom kibontakozásának két fő feltétele volt: a jobbágyfelszabadítás és a mezőgazdaság fejlődése. Kiemelt területet jelentett az infrastruktúra, a bankrendszer, a közlekedés és a hírközlés.</p>
+
+    <p><span class="cim">3. Hitelrendszer, közlekedés és hírközlés.</span> A bankrendszerben jelentős külföldi tőke áramlott az országba, és gyorsan nőtt a hitelintézetek száma. A közlekedésben a vasútépítés kapott nagy szerepet. Ehhez kötődik Baross Gábor, a „vasminiszter", aki államosította a magánvasutakat, és bevezette a zónatarifát. A hírközlésben kiépült a távíró-, a posta- és a telefonhálózat.</p>
+
+    <p><span class="cim">4. Gyorsan fejlődő iparágak.</span> Az élelmiszeriparban Budapest Európa első, a világ második legnagyobb malomipari központja lett, a cukorgyártás, a szeszipar és a dohányipar pedig európai rangra emelkedett. A nehéz- és gépiparban nőtt a szén- és vasigény, elterjedtek a gőzgépek, és fejlődött a járműgyártás. Az elektrotechnikában a Ganz-gyár révén az ország világszínvonalra emelkedett.</p>
+
+    <p><span class="cim">Befejezés.</span> Összefoglalva: a mezőgazdaság fejlődése és a jobbágyfelszabadítás megteremtette az ipar alapjait, a külföldi tőke, a vasút és a hírközlés pedig lehetővé tette a gyors iparosodást, amelyben a malomipar és a Ganz-gyár kiemelkedő szerepet játszott.</p>
+  </section>
+  </div>
+</main>
+
+<script>
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+
+    function activate(tab) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).classList.toggle('active', on);
+      });
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { activate(tab); });
+      tab.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+          activate(next);
+          next.focus();
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
